@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <title>User Information Form</title>
+    <title>Document</title>
+<style>
+body{
+background-color: cadetblue;;
+}
+#container{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;  
+}
+
+#card{
+    display:flex;
+    border-radius: 25px;
+    border:2px solid #ffffff;
+    height:494px;
+    width:293px;
+    overflow:hidden;
+}
+#box
+{
+    position: absolute; /* Position the text relative to the container */
+    top: 50%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    /* text-shadow:; */
+    background-color: rgba(0, 0, 0, 0.2); /* Add a semi-transparent background to the text */
+    color: white; /* Set text color */
+    padding: 10px;
+}
+
+#image{
     
-  
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+</style>
+
 </head>
 <body>
     <div class="card">
