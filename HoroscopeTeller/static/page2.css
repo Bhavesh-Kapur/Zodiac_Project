@@ -1,0 +1,67 @@
+
+/* Style the page background */
+body {
+    background: url(https://c4.wallpaperflare.com/wallpaper/433/452/1009/aces-cards-digital-art-black-background-wallpaper-preview.jpg);
+    background-size: cover;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Style the card container */
+.card {
+width: 300px;
+background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha (fourth) value for opacity */
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+padding: 20px;
+transform-style: preserve-3d; /* Ensure 3D transforms work */
+transition: transform 0.5s; /* Smooth transition for flipping */
+}
+
+/* Style headings */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Style labels for input fields */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Style input fields */
+input[type="text"],
+input[type="date"] {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Hover effect for the submit button */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}

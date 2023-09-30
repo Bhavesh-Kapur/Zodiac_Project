@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'page2.css' %}">
+    <title>User Information Form</title>
+    
+  
 </head>
 <body>
-    {{z}}
+    <div class="card">
+        <h2>User Information</h2>
+        <form method="post" action="/">
+             {% csrf_token %}   
+            <h2> {{z}}</h2>
+        </form>
+    </div>
+
 </body>
 </html>
