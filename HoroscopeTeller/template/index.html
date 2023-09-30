@@ -12,7 +12,8 @@
 <body>
     <div class="card">
         <h2>User Information</h2>
-        <form>
+        <form method="post" action="/">
+             {% csrf_token %}    
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
