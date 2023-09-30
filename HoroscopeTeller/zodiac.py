@@ -1,4 +1,5 @@
 import datetime
+import requests
 
 def newuser(name,dob):
     f = open("User.txt", "w")
@@ -37,3 +38,31 @@ def calculate_zodiac_sign(dob):
 
 
 
+
+
+
+def get_daily_horoscope(zs):
+    if (zs=="Aquarius"):
+        return "Today will bring you new opportunities and exciting adventures!"
+    elif (zs=="Pisces"):
+        return "Your creativity will be at its peak today. Embrace your imagination!"
+    elif (zs=="Aries"):
+        return "You have the energy and determination to achieve great things today. Go for it!"
+    elif (zs=="Taurus"):
+        return "Take some time today to appreciate the beauty around you. It will bring you joy."
+    elif (zs=="Gemini"):
+        return "Your communication skills will shine today. Engage in meaningful conversations!"
+    elif (zs=="Leo"):
+        return "Your confidence will be at its peak today. Step forward and show the world your brilliance!"   
+    elif (zs=="Cancer"):
+        return "Focus on self-care today. Nurture yourself and recharge your energy."
+    elif (zs=="Virgo"):
+        return "You have the ability to organize and accomplish tasks efficiently today. Make the most of it!"
+    elif (zs=="Libra"):
+        return "Seek harmony and balance in all aspects of your life today. It will bring you peace."
+    elif (zs=="Scorpio"):
+        return "Trust your instincts today. Your intuition will guide you towards success."
+    elif (zs=="Sagittarius"):
+        return "Embrace your adventurous spirit today. Engage in new experiences and expand your horizons!"
+    else:
+        return "Your hard work and dedication will pay off today. Keep pushing forward"

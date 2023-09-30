@@ -9,8 +9,9 @@ def index(request):
         print(dob)
         print(type(dob))
         z=zodiac.calculate_zodiac_sign(dob)
+        about=zodiac.get_daily_horoscope(z)
 
-        dic={"z":z}
+        dic={"z":z,"about":about}
 
 
         return render(request,'page2.html',dic)
