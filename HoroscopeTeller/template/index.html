@@ -5,24 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <title>User Information Form</title>
-    
-  
+    <title>Card Flip</title>
+
 </head>
 <body>
+    <form id="my-form" action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        
+        <!-- Form fields here -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <!-- Hidden submit button -->
+        <button type="submit" id="hidden-submit-button" style="display: none;"></button>
+    </form>
+    
+    <!-- Card flip elements here -->
     <div class="card">
-        <h2>User Information</h2>
-        <form method="post" action="/">
-             {% csrf_token %}    
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob" required>
-
-            <button type="submit">Submit</button>
-        </form>
+        <input type="radio" name="card-flip" id="flip-toggle">
+        <div class="card-inner">
+            <div class="card-front">
+                <!-- Front content of the card -->
+                <label for="flip-toggle" class="flip-button">
+                    <span onclick="document.getElementById('hidden-submit-button').click();"></span>
+                </label>
+            </div>
+            <div class="card-back">
+                <h2>{{z}}</h2>
+                <h2>{{about}}</h2>
+                <!-- Back content of the card -->
+                <label for="flip-toggle" class="flip-button">
+                    <span onclick="document.getElementById('hidden-submit-button').click();"></span>
+                </label>
+            </div>
+        </div>
     </div>
-
 </body>
 </html>
