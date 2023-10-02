@@ -4,4 +4,5 @@ from HoroscopeApp import views
 
 urlpatterns = [
     path('',views.index,name='Index'),
+    path('index/', views.index, name='index'),
 ]
